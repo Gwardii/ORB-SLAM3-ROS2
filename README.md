@@ -8,12 +8,14 @@ This repository contains a dockerized comprehensive wrapper for ORB-SLAM3 on ROS
 
 ## 1. Clone this repository
 
-`git clone https://github.com/Gwardii/ORB-SLAM3-ROS2`
+1. ```git clone https://github.com/Gwardii/ORB-SLAM3-ROS2```
+2. ```cd ORB-SLAM3-ROS2```
+3. ```git submodule update --init --recursive --remote```
 
 ## 2. Install Docker on your system
 
 ```bash
-cd ORB-SLAM3-ROS2-Docker
+cd ORB-SLAM3-ROS2
 sudo chmod +x container_root/shell_scripts/docker_install.sh
 ./container_root/shell_scripts/docker_install.sh
 ```
@@ -27,7 +29,7 @@ sudo chmod +x container_root/shell_scripts/docker_install.sh
 
 ## 4. Running the container
 
-1. `cd ORB-SLAM3-ROS2-Docker` (ignore if you are already in the folder)
+1. `cd ORB-SLAM3-ROS2` (ignore if you are already in the folder)
 2. `sudo docker compose run orb_slam3_22_humble`
 3. This should take you inside the container. Once you are inside, run the command `xeyes` and a pair of eyes should pop-up. If they do, x11 forwarding has correctly been setup on your computer.
 
